@@ -1,0 +1,13 @@
+add x10 x08 x02
+ sw x04 008 x03
+sub x07 x03 x04
+ lw x07 000 x09
+beq x04 x03   L
+add x05 x05 x06
+ sw x05 004 x08
+sub x05 x09 x02
+L:
+add x03 x05 x12
+sub x02 x08 x03
+ lw x02 008 x09
+ sw x07 000 x08
