@@ -4,10 +4,16 @@ import argparse
 
 
 def decoder(binary):
-    opcode = binary[25:]
+    opcode = binary[24:]
     if opcode == '0110011':
         type = 'R'
-        rd = binary[19:24]
+        rd = binary[18:23]
+        funct3 = binary[14:17]
+        rs1 = binary[8:13]
+        rs2 = binary[2:7]
+        funct7 = binary[:2]
+        print(len(binary))
+        print(opcode,rd, funct3, rs1, rs2, funct7)
     if opcode == '0010011' or '0000011':
         type = 'I'
     if opcode == '0100011':
